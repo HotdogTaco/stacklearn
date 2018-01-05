@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+{% block title %}Multiple Choice Test Page{% endblock %}
+
+{% block content %}
+
+<h1>Multiple Choice Practice Page</h1>
+
+<div>
+  Is {{ operand1 }} divisible by {{ divisor }}?
+</div>
+
+
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Save" />
+</form>
+
+
+{% endblock %}

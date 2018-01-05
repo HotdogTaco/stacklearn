@@ -17,11 +17,13 @@ from django.conf.urls import include
 from django.contrib import admin
 from django.urls import path
 from mathstack import views as mathstack_views
+from userstats import views as userstats_views
 
 urlpatterns = [
     path('api/', include('api.urls')),
     path('admin/', admin.site.urls),
     path('math/div/', mathstack_views.BoolAnswerCreateView.as_view(), name='bool_answer_create'),
+    path('userstats/', userstats_views.UserStatsCreateView.as_view(), name='userstats'),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('math/mult/', include('multiplechoice.urls'))
+    path('programming/', include('programming.urls')),
 ]
