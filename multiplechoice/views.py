@@ -5,9 +5,9 @@ from multiplechoice import models as multiplechoice_models
 class MultipleChoiceAnswerCreateView(generic.CreateView):
     """ Class-based view to create answers to multiple choice questions.
     """
-    model = mathstack_models.MultipleChoiceAnswer
+    model = multiplechoice_models.MultipleChoiceAnswer
     fields = ["raw_subject","raw_answer"]
-    template_name = "mathstack/multiple_choice_answer_create.html"
+    template_name = "multiplechoice/multiple_choice_answer_create.html"
     #context_object_name
 
     def get_context_data(self, **kwargs):

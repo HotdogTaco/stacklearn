@@ -19,5 +19,5 @@ from django.urls import path
 from multiplechoice import views as multiplechoice_views
 
 urlpatterns = [
-    path('math/mult/', multiplechoice_views.MultipleChoiceAnswerCreateView.as_view(), name='multiple_choice_answer_create'),
+    path('', multiplechoice_views.MultipleChoiceAnswerCreateView.as_view(), name='multiple_choice_answer_create'),
 ]

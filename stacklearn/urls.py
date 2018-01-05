@@ -23,4 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('math/div/', mathstack_views.BoolAnswerCreateView.as_view(), name='bool_answer_create'),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('math/mult/', include('multiplechoice.urls'))
 ]
